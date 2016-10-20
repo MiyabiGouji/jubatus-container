@@ -13,7 +13,7 @@ RUN git clone https://github.com/jubatus/jubatus-installer.git
 RUN cd jubatus-installer && \
     git checkout -b refs/tags/0.9.4 && \
     ./install.sh -p /usr/local && \
-    rm -rf /download
+    rm -rf ./download
 
 # set environment variables from /user/local/jubatus/profile
 ENV JUBATUS_HOME /usr/local
