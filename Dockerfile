@@ -11,7 +11,7 @@ ENV LANG C.UTF-8
 # install the latest jubatus
 RUN git clone https://github.com/jubatus/jubatus-installer.git
 RUN cd jubatus-installer && \
-    git checkout -b refs/tags/0.9.4 && \
+    git checkout -b refs/tags/1.0.2 && \
     ./install.sh -p /usr/local && \
     rm -rf ./download
 
