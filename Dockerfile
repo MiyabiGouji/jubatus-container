@@ -23,4 +23,4 @@ ENV LDFLAGS -L${JUBATUS_HOME}/lib ${LDFLAGS}
 ENV CPLUS_INCLUDE_PATH ${JUBATUS_HOME}/include:${CPLUS_INCLUDE_PATH}
 ENV PKG_CONFIG_PATH ${JUBATUS_HOME}/lib/pkgconfig:${PKG_CONFIG_PATH}
 
-CMD ["jubarecommender", "--configpath=/usr/local/share/jubatus/example/config/recommender/lsh.json", "--rpc-port=9199"]
+CMD ["jubarecommender", "--configpath=/usr/local/share/jubatus/example/config/recommender/inverted_index.json", "--rpc-port=9199"]
