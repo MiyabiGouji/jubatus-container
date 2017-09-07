@@ -11,7 +11,7 @@ ENV LANG C.UTF-8
 # install the latest jubatus
 RUN git clone https://github.com/jubatus/jubatus-installer.git
 RUN cd jubatus-installer && \
-    git checkout -b refs/tags/1.0.2 && \
+    git checkout -b refs/tags/1.0.5 && \
     ./install.sh -p /usr/local && \
     rm -rf ./download
 
@@ -23,4 +23,4 @@ ENV LDFLAGS -L${JUBATUS_HOME}/lib ${LDFLAGS}
 ENV CPLUS_INCLUDE_PATH ${JUBATUS_HOME}/include:${CPLUS_INCLUDE_PATH}
 ENV PKG_CONFIG_PATH ${JUBATUS_HOME}/lib/pkgconfig:${PKG_CONFIG_PATH}
 
-CMD ["jubarecommender", "--configpath=/usr/local/share/jubatus/example/config/recommender/inverted_index.json", "--rpc-port=9199"]
+CMD ["jubarecommender", "--configpath=/usr/local/share/jubatus/example/config/recommender/inverted_index.json", "--rpc-port=9199", "--thread=2"]
